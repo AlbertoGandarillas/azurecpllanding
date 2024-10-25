@@ -75,7 +75,7 @@ export default function Home({ params }: any) {
   }, [settingsObject]);
 
   if (settingsLoading) return <div>Loading settings...</div>;
-  if (settingsError) return <div>Error loading settings</div>;
+  if (settingsError) return <div>Error loading settings {settingsError.message}</div>;
   if (!settingsObject) {
     return <NotFoundPage/>;
   }
