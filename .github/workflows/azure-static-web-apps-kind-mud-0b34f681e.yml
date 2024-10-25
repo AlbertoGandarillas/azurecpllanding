@@ -19,7 +19,7 @@ jobs:
         with:
           submodules: true
           lfs: false
-          
+
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
@@ -29,12 +29,7 @@ jobs:
         run: npm ci
 
       - name: Generate Prisma Client
-        run: npx prisma generate
-
-      - name: Run Prisma Migrations
-        run: npx prisma migrate deploy
-        env:
-          DATABASE_URL: ${{ secrets.DATABASE_URL }}        
+        run: npx prisma generate    
         
       - name: Build And Deploy
         id: builddeploy
