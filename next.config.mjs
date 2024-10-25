@@ -7,5 +7,8 @@ const nextConfig = {
       // Add any other domains you need here
     ],
   },
+  env: {
+    DATABASE_URL: process.env.DATABASE_URL,
+  },
 };
 export default nextConfig;
